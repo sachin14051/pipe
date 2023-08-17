@@ -11,11 +11,28 @@
   </p>
 </div>
 <div class="col-md-4">
- <p> {{business.name | titlecase}}</p>
-
- <p> {{business.networth | currency : 'INR'}}</p>
-
- <p> {{business.companiesOwn | number}}</p>
- <p>{{business.dob | date : 'medium'}}</p>
+ <p> Name : {{business.name | titlecase}}</p>
+ <p> Networth :  {{business.networth | currency : 'INR'}}</p>
+ <p> Employees: {{business.companiesOwn | number}}</p>
+ <p> Date :   {{business.dob | date : 'medium'}}</p>
 </div>
+
+<h2 class="text-white bg-primary p-2">custom pipes</h2>
+<p class="alert alert-info">
+  {{para | data}}
+</p>
+<p class="alert alert-info">
+  {{para | data : 25}}
+</p>
+<p class="alert alert-info">
+  {{para | data : 30}}
+</p>
+
+<h3 class="text-white bg-info p-2">i love add using pipes</h3>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let s of skills">
+  {{s | love}}
+  </li>
+</ul>
 </div>
